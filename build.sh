@@ -1,13 +1,15 @@
 #!/bin/bash
 
-. build-env
+. build-nvhpc
 # User-specific variables
 BUILD_DIR="bld"
 INSTALL_DIR="eclm"
-echo -DNetCDF_F90_LIBRARIES=$NETCDF_DIR/lib
+
+cmake --version
 
 # Run cmake
 cmake -S src -B "$BUILD_DIR" \
+      -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
       -DCMAKE_INSTALL_PREFIX="$INSTALL_DIR" \
       -DCMAKE_C_COMPILER=cc \
       -DCMAKE_Fortran_COMPILER=ftn \
