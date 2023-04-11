@@ -19,5 +19,5 @@ cmake -S src -B "$BUILD_DIR" \
       -DPnetCDF_INCLUDEDIR=$PNETCDF_DIR/include \
       -DPnetCDF_LIBRARIES=$PNETCDF_DIR/lib
 
-cmake --build "$BUILD_DIR"
+cmake --build "$BUILD_DIR" -j 12
 cmake --install "$BUILD_DIR"

@@ -1,6 +1,7 @@
 module switch PrgEnv-cray PrgEnv-nvidia
 module load daint-gpu
 module switch nvidia nvidia/21.3
+module load cray-mpich
 module load cray-netcdf
 module load cray-parallel-netcdf
 module load CMake
